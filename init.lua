@@ -800,7 +800,13 @@ require('lazy').setup({
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      require('mini.align').setup {}
+      require('mini.align').setup(config)
+      config = {
+        mappings = {
+          start = 'ga',
+          start_with_preview = 'gA',
+        },
+      }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
